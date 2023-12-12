@@ -1,0 +1,137 @@
+body{
+  background-color: #ffffff;
+}
+
+.container {
+  margin-top: 10%;
+  display: flex;
+  height: 400px;
+  width: 750px;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border:none;
+  animation: TotalContainerTop 1s ease ;
+  border-radius: 0.8rem;
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container:hover{
+  transform: scale(0.9);
+  transition: all 1s ease;
+}
+.position-relative {
+  position: relative;
+  outline: none;
+  border: none;
+}
+
+.login-image {
+  width: 40%;
+  margin-left: -1rem;
+  background-color: #fff;
+  border-radius: 0.5rem 0 0 0.8rem;
+}
+
+.img-fluid{
+  margin-top:7rem;
+  animation: slideInFromRight 1s ease;
+  animation-fill-mode: forwards;
+}
+
+h2{
+  color: #fff;
+  font-weight: 500;
+  font-size: 2rem;
+  font-family:"monospace";
+}
+
+.row{
+  width: 64%;
+  background-color: rgba(0, 128, 0, 0.808);
+  border-radius: 0rem 0rem 0 3rem;
+  transition: all 1s ease-in-out;
+}
+
+.row:hover{
+  transition: all 1s ease-in-out;
+  border-radius: 0rem 7rem 0 0rem;
+}
+
+.login-form{
+   margin-top: 2rem;
+   width: 100%;
+}
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 1%;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+  transform-origin: top left;
+  transform: translateY(1.25rem);
+  color: #999;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-control {
+  padding-top: 1.5rem;
+  border: none;
+  outline: none;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  transform: translateY(0) scale(0.8);
+}
+
+.form-label.active {
+  transform: translateY(0) scale(0.8);
+  color:  red;
+}
+
+.login-btn{
+  width: 50%;
+  margin-left: auto;
+  padding: 0.5rem;
+  font-size: large;
+  font-weight: 700;
+  background-color: transparent;
+  border: 1px solid;
+  color: #fff;
+  outline: none;
+
+}
+
+.login-btn:hover{
+   border: 1px solid #00BF63;;
+   background-color: white;
+   color: #00BF63;
+   transition: 1s ease;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.login-form {
+  animation: slideInFromRight 1s ease;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes TotalContainerTop {
+  from {
+    transform: translateY(-100%);
+  }to{
+    transform: translateY(0);
+  }
+}
